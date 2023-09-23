@@ -10,10 +10,11 @@ import {
   UploadJob,
 } from "./pages";
 import UserProfile from "./pages/UserProfile";
+import { useSelector } from "react-redux";
 function Layout() {
-  const user = false;
+  const { user } = useSelector((state) => state.user);
   const location = useLocation();
-
+  console.log({ user });
   return user ? (
     <Outlet />
   ) : (
