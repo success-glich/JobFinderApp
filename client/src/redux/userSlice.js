@@ -3,7 +3,8 @@ import { dispatch } from "./store";
 import { users } from "../utils/data";
 
 const initialState = {
-    user: JSON.parse(JSON.stringify(window?.localStorage.getItem("userInfo"))) ?? users[0]
+    // user: JSON.parse(JSON.stringify(window?.localStorage.getItem("userInfo"))) ?? users[0]
+    user: null
 }
 
 const userSlice = createSlice({
